@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block styles%}
+  {{super () }}
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+SC|Cormorant+Garamond|Playfair+Display+SC&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content%}
+<div class="container">
+  <div class="row">
+      <div class="container col-md-4 ">
+          <div class="sidebar-sticky">
+              <nav class="d-none d-md-block bg-light sidebar">
+                  <div class="card container-fluid" style="width: 40rem;">
+                      <div class="card-header">
+                          <h2 class="text-muted" style="color: rgb(22, 21, 18); font-family: 'Playfair Display SC', serif;"> NEWS SOURCES A-Z</h2>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                          {% for source in sources %}
+                          <li class="list-group-item "><a class="text-body" style="text-decoration: none;" href="/source/{{source.id}}">{{ source.name.upper() }}</a></li>
+                          {% endfor %}
+                      </ul>
+                  </div>
+              </nav>
+          </div>
+      </div>
+
+      <div class="container col-md-7" style="background-color: #fff;
+      border: 1px solid #e8e8e9;float: right">
+              <div>
+                  <h2 class="text-center" style="size:21px;color: rgb(12, 12, 10); font-family: 'Playfair Display SC', serif;"> TOP AND TRENDING </h2>
+                  <hr> {% for chelo in Article %} {% if chelo.urlToImage%}
+                  <div class="card">
+                      <div class="card-body">
+                          <h2 style="size:21px; font-family: 'Cormorant Garamond', serif;" class="card-title text-body">{{ chelo.title }}</h2>
+                          <hr>
+                          <p class="card-text text-body">{{ chelo.description }}</p>
+  
+  
+                          <img src="{{ chelo.urlToImage }}" class="card-img-top img-responsive" alt="...">
+                          <p class="card-text" style="text-align: right; padding-top: 1%; font-family: 'Cormorant SC', serif;" class="text-muted">Article by {{ chelo.author }} on {{ chelo.publishedAt}}</p>
+                          <div class="text-center mt-3">
+                              <button type="button" class="btn btn-dark"><a  href="{{ chelo.url }}">READ MORE</a></button>
+                          </div>
+  
+                      </div>
+                      <br>
+                      <hr>
+                  </div>
+                  {% endif %} {% endfor %}
+              </div>
+          </div>
+      </div>
+  </div>
+
+{% endblock %}
