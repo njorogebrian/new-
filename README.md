@@ -31,7 +31,7 @@ No Bugs
 ## Dependencies
 * pip
 ## Support and contact details
-* Email: chelseaowiti@gmail.com
+* Email: briannjoroge2000@gmail.com
 ### License and Copyright details
 * [MIT LICENSE](LICENSE)
 Copyright (c) 2019 **brian njoroge**
