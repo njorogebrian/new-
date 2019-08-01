@@ -2,7 +2,8 @@
 
 {% block styles%}
   {{super () }}
-  <link href="https://fonts.googleapis.com/css?family=Cormorant+SC|Cormorant+Garamond|Playfair+Display+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+
 {% endblock %}
 
 {% block content%}
@@ -13,7 +14,7 @@
               <nav class="d-none d-md-block bg-light sidebar">
                   <div class="card container-fluid" style="width: 40rem;">
                       <div class="card-header">
-                          <h2 class="text-muted" style="color: rgb(22, 21, 18); font-family: 'Playfair Display SC', serif;"> NEWS SOURCES A-Z</h2>
+                          <h2 class="text-muted" style="color: rgb(46, 161, 152); font-family: 'Playfair Display SC', serif;"> NEWS SOURCES A-Z</h2>
                       </div>
                       <ul class="list-group list-group-flush">
                           {% for source in sources %}
@@ -38,7 +39,7 @@
   
   
                           <img src="{{ chelo.urlToImage }}" class="card-img-top img-responsive" alt="...">
-                          <p class="card-text" style="text-align: right; padding-top: 1%; font-family: 'Cormorant SC', serif;" class="text-muted">Article by {{ chelo.author }} on {{ chelo.publishedAt}}</p>
+                          <p class="card-text" style="text-align: right; padding-top: 1%; font-family: 'Pacifico', cursive; " class="text-muted">Article by {{ chelo.author }} on {{ chelo.publishedAt}}</p>
                           <div class="text-center mt-3">
                               <button type="button" class="btn btn-dark"><a  href="{{ chelo.url }}">READ MORE</a></button>
                           </div>
