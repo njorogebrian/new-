@@ -2,7 +2,7 @@
 
 {% block styles%}
   {{super () }}
-  <link href="https://fonts.googleapis.com/css?family=Merienda|Sanchez&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=El+Messiri|Merienda&display=swap" rel="stylesheet">
 
 {% endblock %}
 
@@ -14,7 +14,7 @@
               <nav class="d-none d-md-block bg-light sidebar">
                   <div class="card container-fluid" style="width: 40rem;">
                       <div class="card-header">
-                          <h2 class="text-muted" style="color: rgb(46, 161, 152);font-family: 'Sanchez', serif; "> NEWS SOURCES A-Z</h2>
+                          <h2 class="text-muted" style="color: rgb(46, 161, 152); "> NEWS SOURCES A-Z</h2>
                       </div>
                       <ul class="list-group list-group-flush">
                           {% for source in sources %}
@@ -29,17 +29,17 @@
       <div class="container col-md-7" style="background-color: #fff;
       border: 1px solid #e8e8e9;float: right">
               <div>
-                  <h2 class="text-center" style="size:21px;color: rgb(12, 12, 10); font-family: 'Playfair Display SC', serif;"> TOP AND TRENDING </h2>
+                  <h2 class="text-center" style="size:21px;color: rgb(7, 80, 0); font-family: 'font-family: 'Merienda', cursive;"> TOP AND TRENDING </h2>
                   <hr> {% for chelo in Article %} {% if chelo.urlToImage%}
                   <div class="card">
                       <div class="card-body">
-                          <h2 style="size:21px; font-family: 'Cormorant Garamond', serif;" class="card-title text-body">{{ chelo.title }}</h2>
+                          <h2 style="size:21px ; font-family: 'El Messiri', sans-serif; " class="card-title text-body">{{ chelo.title }}</h2>
                           <hr>
                           <p class="card-text text-body">{{ chelo.description }}</p>
   
   
                           <img src="{{ chelo.urlToImage }}" class="card-img-top img-responsive" alt="...">
-                          <p class="card-text" style="text-align: right; padding-top: 1%; font-family: 'Pacifico', cursive; " class="text-muted">Article by {{ chelo.author }} on {{ chelo.publishedAt}}</p>
+                          <p class="card-text" style="text-align: right; padding-top: 1%; font-family: 'El Messiri', sans-serif; " class="text-muted">Article by {{ chelo.author }} on {{ chelo.publishedAt}}</p>
                           <div class="text-center mt-3">
                               <button type="button" class="btn btn-dark"><a  href="{{ chelo.url }}">READ MORE</a></button>
                           </div>
